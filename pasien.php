@@ -64,6 +64,7 @@
                                                     <a class="btn btn-warning btn-sm" href="pasien_edit.php?id=<?php echo $d['id_pasien'] ?>">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/><path xmlns="http://www.w3.org/2000/svg" d="M12 20h9"/><path xmlns="http://www.w3.org/2000/svg" d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
                                                     </a>
+                                                    <!-- <a class="btn btn-primary btn-sm" onClick="editClick(1)" >edit</a> -->
                                                 </td>
                                                 </tr>
                                                 <?php 
@@ -81,6 +82,64 @@
 
                 </div>
         
+<div class="modal fade slide-down" id="myModal" tabindex="-1" role="dialog" aria-hidden="false" data-backdrop="static">
+<div class="modal-dialog" id="inModal">
+
+ 
+</div>
+</div>
         <!--  END CONTENT AREA  -->
-        
+
+<script type="text/javascript">     
+var allpos=0;
+	 function loadStart()
+	{			 
+			$.ajax({ 
+       success : function(r)
+           {
+              $('#myModal').modal('show');  // put your modal id 
+            	$('.modal-dialog').show().html("<div class='modal-content-wrapper modal-sm' style='margin-top:250px;margin-left:250px;'><div class='modal-content'><div class='modal-body text-left no-margin'><img src='assets/img/712(1).GIF' style='margin-top:20px;'/></div></div></div>");
+				//$('.modal-dialog').show().html(r);
+           }
+    	});	
+	}
+	 
+	 function pageBack()
+	 {
+		 
+	 }
+	 
+	 function loadStop()
+	{			 
+			$.ajax({ 
+         
+       success : function(r)
+           {
+              $('#myModal').modal("hide");
+            	
+           }
+    	});	
+	}
+
+    function hideModal()
+	{
+		$('#myModal').modal();
+	}
+
+    function editClick(id)
+	{			
+			$.ajax({
+				type : 'post',
+           url : 'pasien.php', 
+          data :  'id='+ id,
+         
+       success : function(r)
+           {
+              // now you can show output in your modal 
+              $('#myModal').modal('show');  // put your modal id 
+            	$('.modal-dialog').show().html(r);
+           }
+    	});	
+	}
+</script>
 <?php include 'footer.php'; ?>        
