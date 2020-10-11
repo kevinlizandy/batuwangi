@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2020 at 02:11 PM
+-- Generation Time: Oct 11, 2020 at 06:35 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -52,6 +52,14 @@ CREATE TABLE `imunisasi` (
   `campakbooster` bit(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `imunisasi`
+--
+
+INSERT INTO `imunisasi` (`no_kunjungan`, `id_pasien`, `tanggal`, `nama_anak`, `jenis_kelamin`, `tanggal_lahir`, `nama_ortu`, `alamat`, `hbo`, `bcg`, `pentabio1`, `pentabio2`, `pentabio3`, `polio1`, `polio2`, `polio3`, `polio4`, `ipv`, `campak`, `pentabooster`, `campakbooster`) VALUES
+(1, '201008182109', '2020-10-11 17:53:25', 'Kevin', 'L', '1994-12-15', '', 'jl aksndadn', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'0', b'1'),
+(2, '201008182109', '2020-10-11 17:54:00', 'Kevin Jr', 'L', '1994-12-15', 'Kevin', 'jl aksndadn 2131313', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1', b'1');
+
 -- --------------------------------------------------------
 
 --
@@ -95,7 +103,16 @@ CREATE TABLE `kb` (
 --
 
 INSERT INTO `kb` (`no_kunjungan`, `id_pasien`, `tanggal`, `desa`, `lama_pil`, `lama_suntik`, `lama_iud`, `lama_implant`, `lama_mow`, `lama_mop`, `lama_kondom`, `lama_total`, `baru_pil`, `baru_suntik`, `baru_iud`, `baru_implant`, `baru_mow`, `baru_mop`, `baru_kondom`, `baru_total`, `efek_samping`, `komplikasi`, `kegagalan`, `do`, `aktif`, `aktif_gakin`, `aktif_4t`, `aktif_alkj`, `pasca_persalinan`) VALUES
-(1, '1', '2020-10-20 10:20:00', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(4, '201008182109', '2020-10-09 19:33:34', 'Desa Sejuk', b'1', b'0', b'0', b'0', b'0', b'0', b'0', 1, b'1', b'0', b'0', b'0', b'0', b'0', b'0', 1, b'0', b'0', b'0', b'0', b'1', b'0', b'0', b'0', b'0'),
+(5, '201008182146', '2020-10-09 21:02:07', 'Desa Adem', b'1', b'0', b'0', b'0', b'0', b'0', b'0', 0, b'0', b'1', b'0', b'0', b'0', b'0', b'0', 0, b'0', b'0', b'0', b'0', b'1', b'0', b'0', b'0', b'0'),
+(6, '201008182154', '2020-10-09 21:08:44', 'Desa Dingin', b'1', b'0', b'0', b'0', b'1', b'1', b'0', 3, b'0', b'1', b'1', b'1', b'0', b'0', b'1', 4, b'0', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
+(7, '201008182109', '2020-10-09 21:11:00', 'Desa OK', b'0', b'0', b'0', b'1', b'0', b'0', b'0', 0, b'0', b'0', b'0', b'0', b'0', b'1', b'0', 0, b'1', b'0', b'1', b'0', b'0', b'0', b'0', b'1', b'0'),
+(8, '201007180832', '2020-10-09 21:11:23', 'Desa LOL', b'0', b'0', b'1', b'0', b'0', b'0', b'1', 2, b'0', b'1', b'0', b'0', b'0', b'0', b'1', 2, b'1', b'1', b'0', b'0', b'0', b'0', b'0', b'1', b'0'),
+(9, '201008175105', '2020-10-09 21:11:43', 'Desa Pop', b'1', b'0', b'0', b'0', b'0', b'0', b'1', 2, b'0', b'0', b'0', b'1', b'0', b'1', b'0', 2, b'0', b'1', b'0', b'0', b'0', b'0', b'0', b'0', b'1'),
+(10, '201008182154', '2020-10-09 21:13:24', 'Desa Poll', b'0', b'1', b'0', b'0', b'0', b'0', b'1', 2, b'1', b'0', b'0', b'1', b'0', b'0', b'0', 2, b'0', b'0', b'0', b'0', b'1', b'1', b'0', b'1', b'0'),
+(11, '201008182109', '2020-10-09 21:13:58', 'Desa Yuk', b'0', b'1', b'0', b'0', b'0', b'0', b'0', 1, b'0', b'0', b'0', b'1', b'0', b'0', b'0', 1, b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'0'),
+(12, '201008182109', '2020-10-09 21:15:15', 'Kuy', b'0', b'0', b'0', b'0', b'1', b'1', b'0', 2, b'1', b'1', b'0', b'0', b'0', b'0', b'0', 2, b'0', b'0', b'0', b'0', b'1', b'1', b'1', b'1', b'0'),
+(13, '201008175105', '2020-10-11 17:51:41', '', b'0', b'0', b'0', b'0', b'0', b'0', b'0', 0, b'0', b'0', b'0', b'0', b'0', b'0', b'0', 0, b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'0', b'0');
 
 -- --------------------------------------------------------
 
@@ -123,13 +140,20 @@ CREATE TABLE `kehamilan` (
   `keterangan` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `kehamilan`
+--
+
+INSERT INTO `kehamilan` (`no_kunjungan`, `id_pasien`, `tanggal`, `nama`, `umur`, `suami`, `alamat`, `hamil_ke`, `umur_kehamilan`, `imunisasi_tt1`, `imunisasi_tt2`, `kunjungan_k1`, `kunjungan_k4`, `fe`, `resiko_tinggi`, `dirujuk`, `keterangan`) VALUES
+(1, '201008175105', '2020-10-11 18:31:05', 'Kevin', 26, 'Suami', 'Lklannconasd', 1, 4, b'1', b'1', b'1', b'1', b'1', b'1', b'1', 'Tdk ada keternagna');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `neomatus`
+-- Table structure for table `neonatus`
 --
 
-CREATE TABLE `neomatus` (
+CREATE TABLE `neonatus` (
   `no_kunjungan` int(11) NOT NULL,
   `id_pasien` varchar(12) DEFAULT NULL,
   `tanggal` datetime DEFAULT NULL,
@@ -173,8 +197,7 @@ INSERT INTO `pasien` (`id_pasien`, `nama_pasien`, `nama_suami`, `alamat`, `tempa
 ('201008175105', 'Kevin', '', 'jl aksndadn', 'bandung', '1994-12-15', '10924371207', 'upload/bae-suzy-png.png', '1928312047', '0000-00-00'),
 ('201008182109', 'Kevin', '', 'jl aksndadn', 'bandung', '1994-12-15', '10924371207', 'upload/', '1928312047', '0000-00-00'),
 ('201008182146', 'abbbasd', 'aidsaob', 'jandkajn1i98621', 'jakarta', '1980-10-20', '891265011123', 'upload/', '891240141123', '0000-00-00'),
-('201008182154', 'Kevin', '', 'jl aksndadn', 'bandung', '1994-12-15', '10924371207', 'upload/', '1928312047', '0000-00-00'),
-('201009072608', '', '', '', '', '0000-00-00', '', 'upload/', '', '0000-00-00');
+('201008182154', 'Kevin', '', 'jl aksndadn', 'bandung', '1994-12-15', '10924371207', 'upload/', '1928312047', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -224,9 +247,9 @@ ALTER TABLE `kehamilan`
   ADD PRIMARY KEY (`no_kunjungan`);
 
 --
--- Indexes for table `neomatus`
+-- Indexes for table `neonatus`
 --
-ALTER TABLE `neomatus`
+ALTER TABLE `neonatus`
   ADD PRIMARY KEY (`no_kunjungan`);
 
 --
@@ -249,24 +272,24 @@ ALTER TABLE `persalinan`
 -- AUTO_INCREMENT for table `imunisasi`
 --
 ALTER TABLE `imunisasi`
-  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `kb`
 --
 ALTER TABLE `kb`
-  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `kehamilan`
 --
 ALTER TABLE `kehamilan`
-  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `neomatus`
+-- AUTO_INCREMENT for table `neonatus`
 --
-ALTER TABLE `neomatus`
+ALTER TABLE `neonatus`
   MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
