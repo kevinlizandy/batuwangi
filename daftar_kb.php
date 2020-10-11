@@ -41,7 +41,7 @@
     $do = $_POST['do'];
     $aktif = $_POST['aktif'];
     $aktifGakin = $_POST['aktifgakin'];
-    $aktif4T = $_POST['aktif4T'];
+    $aktif4T = $_POST['aktif4t'];
     $aktifAlkj = $_POST['aktifalkj'];
     $pascaPersalinan = $_POST['pascapersalinan'];
     
@@ -50,10 +50,10 @@
     $query = "insert into kb values (NULL,'$idPasien','$tanggal','$desa',
                                 '$lamaPil','$lamaSuntik','$lamaIud','$lamaImplant','$lamaMow','$lamaMop','$lamaKondom','$lamaTotal',
                                 '$baruPil','$baruSuntik','$baruIud','$baruImplant','$baruMow','$baruMop','$baruKondom','$baruTotal',
-                                '$efekSamping','$komplikasi','$kegagalan','$do','$aktif','$aktifGakin','$aktif4T','$aktifAlkj','$pascaPersalinan'";
+                                '$efekSamping','$komplikasi','$kegagalan','$do','$aktif','$aktifGakin','$aktif4T','$aktifAlkj','$pascaPersalinan')";
 
     mysqli_query($koneksi, $query);
-    // header("location:pemilih.php");
+    header("location:kb.php?success=Pendaftaran kunjungan berhasil");
     
     // echo $query;
 ?>

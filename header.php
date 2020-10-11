@@ -19,6 +19,10 @@
     
     <link href="plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
     <link href="plugins/flatpickr/custom-flatpickr.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="plugins/select2/select2.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/forms/theme-checkbox-radio.css">
     <!-- END PAGE LEVEL CUSTOM STYLES -->
 
 
