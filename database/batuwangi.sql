@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2020 at 06:35 PM
+-- Generation Time: Oct 11, 2020 at 07:22 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.1.33
 
@@ -168,6 +168,13 @@ CREATE TABLE `neonatus` (
   `keterangan` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `neonatus`
+--
+
+INSERT INTO `neonatus` (`no_kunjungan`, `id_pasien`, `tanggal`, `nama`, `tempat_lahir`, `tanggal_lahir`, `nama_ortu`, `alamat`, `imunisasi`, `keadaan`, `jk`, `keterangan`) VALUES
+(1, '201008182154', '2020-10-11 18:58:39', 'Kevin', 'bandung', '1994-12-15', 'Popdkkka', 'lNksfkabb', 'Apapun', 'Sehat', 'P', 'Tdk ada keterangan');
+
 -- --------------------------------------------------------
 
 --
@@ -216,13 +223,21 @@ CREATE TABLE `persalinan` (
   `anak_ke` int(11) DEFAULT NULL,
   `tanggal_lahir` date DEFAULT NULL,
   `jam_lahir` varchar(20) DEFAULT NULL,
-  `bb` varchar(20) DEFAULT NULL,
-  `pb` varchar(20) DEFAULT NULL,
+  `bb` decimal(10,0) DEFAULT NULL,
+  `pb` decimal(10,0) DEFAULT NULL,
   `ibu_sehat` bit(1) DEFAULT NULL,
   `ibu_dirujuk` bit(1) DEFAULT NULL,
   `bayi_sehat` bit(1) DEFAULT NULL,
-  `bayi_dirujuk` bit(1) DEFAULT NULL
+  `bayi_dirujuk` bit(1) DEFAULT NULL,
+  `jk` varchar(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `persalinan`
+--
+
+INSERT INTO `persalinan` (`no_kunjungan`, `id_pasien`, `tanggal`, `nama_ibu`, `umur`, `nama_suami`, `alamat`, `anak_ke`, `tanggal_lahir`, `jam_lahir`, `bb`, `pb`, `ibu_sehat`, `ibu_dirujuk`, `bayi_sehat`, `bayi_dirujuk`, `jk`) VALUES
+(1, '201008175105', '2020-10-11 19:21:49', 'Kevin Jr', 26, 'Suami2', 'jl aksndadn 12314', 1, '2020-10-13', '10:20', '2', '43', b'1', b'1', b'1', b'1', 'L');
 
 --
 -- Indexes for dumped tables
@@ -290,13 +305,13 @@ ALTER TABLE `kehamilan`
 -- AUTO_INCREMENT for table `neonatus`
 --
 ALTER TABLE `neonatus`
-  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `persalinan`
 --
 ALTER TABLE `persalinan`
-  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `no_kunjungan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
